@@ -1,3 +1,6 @@
+% Ez a program a szamok szamjegyei alapjan rajzol
+% V1.4 - 2020.12.25.
+
 clear, clc
 
 x=0
@@ -5,7 +8,7 @@ y=0
 
 hold on
 
-for i = 1:100000
+for i = 1:10000
     for karakter = num2str(i)
         disp(karakter)
         if karakter == '2'
