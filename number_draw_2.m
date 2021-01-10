@@ -1,9 +1,9 @@
-% Ez a program a Fibonacci-szamok szamjegyei alapjan rajzol
+% Ez a program a decimalis szamok szamjegyei alapjan rajzol
 % V2.1 - 2021.01.10.
 
 clear, clc
 
-system('python fibonacci.py')               % A Fibonacci-szamok generalasa Pythonnal
+system('python number.py')                  % A decimalis szamok generalasa Pythonnal
 
 x=0                                         % X-tengely
 y=0                                         % Y-tengely
@@ -20,7 +20,7 @@ kilences=0
 
 count=0                                     % Muveletek szamolasa
 
-fajl = fopen('fib.txt','r')                 % A Fibonacci-szamokat tartalmazo fajl megnyitasa
+fajl = fopen('number.txt','r')             % A szamokat tartalmazo fajl megnyitasa
 
 form = '%s'                                 % Fajl formatumanak beallitasa
 
@@ -30,6 +30,7 @@ fclose(fajl)                                % A fajl bezarasa
 
 hold on                                     % Az összes rajzelem megtartasa
 
+for i = strlength(A)
     for karakter = int2str(A)               % Az A tomb karaktereinek feldolgozasa
         %disp(karakter)
         count = count+1                     % Szamlalo egyel novelese
@@ -95,6 +96,7 @@ hold on                                     % Az összes rajzelem megtartasa
             kilences=kilences+1
         end
     end
+end
     
 
 
